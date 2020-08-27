@@ -1,5 +1,7 @@
 const modules = [
-
+    'Collections',
+    'Search',
+    'DOM'
 ];
 
 /* Load all the modules */
