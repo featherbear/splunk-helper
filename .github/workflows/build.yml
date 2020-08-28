@@ -1,0 +1,36 @@
+name: minify package
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - name: Install terser
+      run: npm install -g terser
+
+    - name: Build
+      run: | 
+        find . -iname "*.js" -not -path "./dist/*" -exec sh -c 'mkdir -p "dist/$(dirname {})/"' \;
+        find . -iname "*.js" -exec sh -c 'terser --compress --toplevel --mangle --source-map --output "dist/{}" "{}"' \;
+        test $(find . -iname "*.js" -not -path "./dist/*" | wc -l) -eq $(find ./dist -iname "*.js" | wc -l)
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.3.1
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: dist
+
+
+
+
