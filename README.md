@@ -61,9 +61,9 @@ require([
 
 Documentation to come... maybe not... unless?
 
-## Future
+## Development
 
-Use rollup or something to bundle the files
+GitHub Repository: [featherbear/splunk-helper](https://github.com/featherbear/splunk-helper)
 
 # License
 
