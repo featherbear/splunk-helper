@@ -3,6 +3,8 @@
 Reusable JavaScript functions for designing Splunk interfaces.  
 _I have no idea about the terminology, I'm a newbie to Splunk_
 
+---
+
 ## Importing
 
 ### (Recommended) Universal Import
@@ -65,7 +67,7 @@ Documentation to come... maybe not... unless?
 
 GitHub Repository: [featherbear/splunk-helper](https://github.com/featherbear/splunk-helper)
 
-# License
+## License
 
 Copyright © 2020 Andrew Wong
 
