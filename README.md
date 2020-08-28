@@ -7,7 +7,7 @@ _I have no idea about the terminology, I'm a newbie to Splunk_
 
 ### (Recommended) Universal Import
 
-The `helper.js` file imports all of the modules in this library as a single dictionary, where each module is accessible by its name.
+The `helper.js` file combines all the modules into a single object, each module accessible by its name.
 
 Add `https://featherbear.cc/splunk-helper/helper.js` to your `require` statement.
 
@@ -42,7 +42,7 @@ require([
 ### Specific Import
 
 You can also import specific modules (for loading speed optimisation, etc...).  
-Modules are located in the `lib` directory, and are accessible at `'https://featherbear.cc/splunk-helper/lib/<MODULE>.js`.
+Modules are located in the `lib` directory, and are accessible at `https://featherbear.cc/splunk-helper/lib/<MODULE>.js`.
 
 ```js
 require([

@@ -24,6 +24,15 @@ jobs:
         find . -iname "*.js" -not -path "./dist/*" -exec sh -c 'terser --compress --toplevel --mangle --source-map --output "dist/{}" "{}"' \;
         test $(find . -iname "*.js" -not -path "./dist/*" | wc -l) -eq $(find ./dist -iname "*.js" | wc -l)
 
+    - name: Generate HTML from README.md
+      uses: docker://pandoc/core:2.9
+      with:
+        args: >
+          --standalone
+          --metadata pagetitle="SplunkJS Helpers"
+          --output=dist/index.html
+          README.md
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.3.1
       env:
