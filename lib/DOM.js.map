@@ -1,0 +1,1 @@
+{"version":3,"sources":["./lib/DOM.js"],"names":["define","$","createButton","text","className","clickFn","btnElem","document","createElement","innerText","addEventListener"],"mappings":"AAAAA,OAAO,CAAC,UAAYC,IAAM,CACtBC,aAAc,CAACC,EAAMC,EAAWC,KAC5B,MAAMC,EAAUC,SAASC,cAAc,UAIvC,OAHAF,EAAQF,UAAY,QAAOA,GAAa,IACxCE,EAAQG,UAAYN,EACpBE,GAAWC,EAAQI,iBAAiB,QAASL,GACtCC"}

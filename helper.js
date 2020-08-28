@@ -1,0 +1,1 @@
+!function(){const n=["Collections","Search","DOM"];define(n.map(n=>`./lib/${n}.js`),(function(){return n.reduce((n,e,c)=>({...n,[e]:arguments[c]}),{})}))}();
