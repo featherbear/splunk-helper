@@ -1,5 +1,65 @@
-# JavaScript Helper files for Splunk
+# SplunkJS Helpers
 
+Reusable JavaScript functions for designing Splunk interfaces.  
+_I have no idea about the terminology, I'm a newbie to Splunk_
+
+## Importing
+
+### (Recommended) Universal Import
+
+The `helper.js` file imports all of the modules in this library as a single dictionary, where each module is accessible by its name.
+
+Add `https://featherbear.cc/splunk-helper/helper.js` to your `require` statement.
+
+```js
+require([
+            'jquery'
+            'splunkjs/mvc',
+            'https://featherbear.cc/splunk-helper/helper.js'
+        ],
+        function ($, mvc, splunkHelper) {
+            // Your code goes here
+            // splunkHelper.DOM.createButton(...)
+        }
+)
+```
+
+You can using the destructuring assignment to simplify your namespace.
+
+```js
+require([
+            'jquery'
+            'splunkjs/mvc',
+            'https://featherbear.cc/splunk-helper/helper.js'
+        ],
+        function ($, mvc, { DOM }) {
+            // Your code goes here
+            // DOM.createButton(...)
+        }
+)
+```
+
+### Specific Import
+
+You can also import specific modules (for loading speed optimisation, etc...).  
+Modules are located in the `lib` directory, and are accessible at `'https://featherbear.cc/splunk-helper/lib/<MODULE>.js`.
+
+```js
+require([
+            'jquery'
+            'splunkjs/mvc',
+            'https://featherbear.cc/splunk-helper/lib/DOM.js'
+        ],
+        function ($, mvc, DOM ) {
+            // Your code goes here
+            // DOM.createButton(...)
+        }
+)
+```
+
+## Usage
+
+Documentation to come... maybe not... unless?
 
 ## Future
 
